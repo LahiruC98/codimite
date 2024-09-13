@@ -1,0 +1,5 @@
+select c.CustomerName , sum(OrderAmount) as TotalSpent
+from Customers c 
+right join Orders o
+on c.CustomerID = o.CustomerID
+group by c.CustomerID
